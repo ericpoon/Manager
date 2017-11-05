@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    // style issues
+    "indent"           : ["warn", 4],
+    "semi"             : ["warn", "always"],
+    "space-unary-ops"  : ["warn", {"words": true, "nonwords": false}],
+    "quotes"           : ["warn", "single"],
+    "comma-spacing"    : "warn",
+    "no-magic-numbers" : "warn",
+    "camelcase"        : "error",
+
+    // fatal issues
+    "consistent-return": "error",
+    "eqeqeq"           : "error",
+
+    // for convenience
+    "no-unused-vars"   : "off", // override "error"
+    "no-undef"         : "off", // override "error"
+
+    // allow/disallow console logs
+    "no-console"       : "off",
+
+    // react native per-project rules: https://github.com/yannickcr/eslint-plugin-react
+    "react/no-danger"  : "error",
+    "react/no-typos"   : "error",
+    "react/jsx-pascal-case": "error",
+    "react/prop-types": "off"
+
+  },
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "jest": true
+  }
+}
