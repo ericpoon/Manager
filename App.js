@@ -10,6 +10,7 @@ import LoginForm from './src/components/LoginForm';
 import {Card} from './src/components/common/Card';
 import {CardSection} from './src/components/common/CardSection';
 import {Spinner} from './src/components/common/Spinner';
+import Router from './src/Router';
 
 export default class App extends React.Component {
     state = {isLoggedIn: null};
@@ -58,8 +59,9 @@ export default class App extends React.Component {
         return (
             <Provider store={this.store}>
                 <View>
-                    <Header text={'Authentication'}/>
-                    {this.renderContent()}
+                    {/*<Header text={'Authentication'}/>*/}
+                    {/*{this.renderContent()}*/}
+                    <Router/>
                 </View>
             </Provider>
         );
