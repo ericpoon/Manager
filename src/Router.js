@@ -20,7 +20,7 @@ const RouterComponent = () => {
                     key={'login'}
                     component={LoginForm}
                     title={'Login'}
-                    // initial
+                    initial
                 />
 
                 <Scene
@@ -30,7 +30,6 @@ const RouterComponent = () => {
                     component={EmployeeList}
                     title={'Employee List'}
                     type={'replace'}
-                    initial
                 />
 
                 <Scene
