@@ -63,6 +63,8 @@ const styles = {
     errorTextStyle: {
         fontSize: 20,
         color: 'red',
+        textAlign: 'center',
+        flex: 1,
     },
 };
 
