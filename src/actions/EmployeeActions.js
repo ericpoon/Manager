@@ -58,3 +58,15 @@ export const employeeSave = ({name, phone, shift, key}) => {
             });
     };
 };
+
+export const employeeRemove = ({key}) => {
+    const {currentUser} = firebase.auth();
+
+    return () => {
+        firebase.database().ref(`/users/${currentUser.uid}/employees/${key}`)
+            .remove()
+            .then(() => {
+                Actions.employeeList({type: 'reset'});
+            });
+    };
+};
